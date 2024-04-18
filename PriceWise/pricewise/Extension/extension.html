@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="extension.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <title>PriceWise</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 400;
+}
+body{
+    width: 30rem;
+    height: 20rem;
+    margin: 0;
+    padding: 0;
+    border-radius: 2rem;
+    border-style: none;
+}
+.container{
+    margin: 0;
+    width: 30rem;
+    height: 20rem;
+}
+.link{
+    height: 2rem;
+    width: 22rem;
+    border-radius: 5px;
+    border-style: none;
+    padding-left: 0.5rem;
+    background-color: rgb(230, 230, 230);
+}
+h1{
+    padding-bottom: 0.7rem;
+}
+h2{
+    padding-bottom: 0.4rem;
+    font-size: 1.2rem;
+}
+.productLink{
+    padding-left: 1rem;
+}
+.btn{
+    height: 2.2rem;
+    width: 4.5rem;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #00308F;
+    color: white;
+    cursor: pointer;
+}
+.logo{
+    padding-left: 1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.6rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-style: italic;
+}
+.logo span{
+  font-weight: bold;
+}
+section{
+    padding-bottom: 1rem;
+}
+.productDetails{
+    display: grid;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    height: 10rem;
+    grid-template-columns: 10.5rem 16.75rem;
+    
+}
+.image{
+  justify-content: center;
+}
+
+/* .image{
+    background-color: aqua;
+}
+.text{
+    background-color: blueviolet;
+} */
+</style>
+<body>
+  <div class="container">
+    <h1 class="logo"><span style="color: #007FFF;">P</span>rice<span style="color: #007FFF;">W</span>ise</h1>
+    <section class="productLink">
+      <h2>Search for best offers</h2>
+      <form action="/getLink" method="get">
+        <input name="text" class="link" type="text" placeholder="Paste your product link here..."></input>
+        <button id = "searchBtn" type="submit" class="btn" >Search</button>
+      </form>
+    </section>
+    <section class="productDetails">
+      <div class="image">
+        <img src="{{productImage}}">
+      </div>
+      <div class="text">
+        <p>{{productName}}</p>
+  </section>
+  </div>
+  <script src="content.js"></script>
+</body>
+</html>

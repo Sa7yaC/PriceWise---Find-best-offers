@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "PriceWise",
+    "version": "1.0",
+    "description": "Get best offers for your desired products",
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+      "default_popup": "extension.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+  

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="extension.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <title>PriceWise</title>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="logoforextension.png" height="45" width="160">
+    <section class="productLink">
+      <h2>Search for best offers</h2>
+      <form action="/getLink" method="get">
+        <input name="text" class="link" type="text" placeholder="Paste your product link here..."></input>
+        <button id = "searchBtn" type="submit" class="btn">Search</button>
+      </form>
+    </section>
+    <section class="productDetails">
+        <div class="image">.</div>
+        <div class="text">{{productName}}</div>
+    </section>
+    
+
+  </div>
+</body>
+</html>
